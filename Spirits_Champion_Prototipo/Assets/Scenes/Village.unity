@@ -5764,6 +5764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church
       objectReference: {fileID: 0}
+    - target: {fileID: 8652654164592334911, guid: fb273f191755d4defa2795181ded6268, type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb273f191755d4defa2795181ded6268, type: 3}
 --- !u!4 &1556533572 stripped
