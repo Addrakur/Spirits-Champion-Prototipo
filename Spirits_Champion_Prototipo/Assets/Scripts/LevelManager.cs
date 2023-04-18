@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string nextScene; // Proxima cena a ser carregada
     [SerializeField] private string[] unloadScene; // Cenas antigas para dar unload
     [SerializeField] private bool notAdditive;
+    private float sceneLoadDelay = 2;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +17,7 @@ public class LevelManager : MonoBehaviour
         {
             if (notAdditive)
             {
-                SceneManager.LoadScene(nextScene);
+                StartCoroutine(SceneLoad());
             }
             else
             {
@@ -34,5 +36,11 @@ public class LevelManager : MonoBehaviour
 
             }
         }
+    }
+
+    IEnumerator SceneLoad()
+    {
+        yield return new WaitForSeconds(sceneLoadDelay);
+        SceneManager.LoadScene(nextScene);
     }
 }

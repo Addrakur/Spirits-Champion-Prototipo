@@ -2983,7 +2983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4227204648941677245, guid: 27121e51c217c469f81db78ca64fa207, type: 3}
       propertyPath: unloadScene.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4227204648941677245, guid: 27121e51c217c469f81db78ca64fa207, type: 3}
       propertyPath: unloadScene.Array.data[0]
