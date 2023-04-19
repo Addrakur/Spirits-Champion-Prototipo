@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142363557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34, y: 5, z: 0}
+  m_LocalPosition: {x: 34, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,7 +223,7 @@ MonoBehaviour:
   parallaxLayer: 2
   playerCamera: {fileID: 2136261206}
   levelStartX: 34
-  levelStartY: 5
+  levelStartY: -3
 --- !u!4 &207020039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5716152330553460146, guid: 743257c0f12384c00b4f8fe6c47f17ec, type: 3}
@@ -343,7 +343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745282700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34, y: 0, z: 0}
+  m_LocalPosition: {x: 34, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -417,7 +417,7 @@ MonoBehaviour:
   parallaxLayer: 4
   playerCamera: {fileID: 2136261206}
   levelStartX: 34
-  levelStartY: 0
+  levelStartY: -3
 --- !u!1 &1347771976
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347771976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33, y: 4, z: 0}
+  m_LocalPosition: {x: 34, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -517,8 +517,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parallaxLayer: 2
   playerCamera: {fileID: 2136261206}
-  levelStartX: 33
-  levelStartY: 4
+  levelStartX: 34
+  levelStartY: 12
 --- !u!1001 &1407972485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -622,7 +622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561036871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34, y: -1.5, z: 0}
+  m_LocalPosition: {x: 34, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -696,7 +696,7 @@ MonoBehaviour:
   parallaxLayer: 3
   playerCamera: {fileID: 2136261206}
   levelStartX: 34
-  levelStartY: -1.5
+  levelStartY: -3
 --- !u!1 &1789366330
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,8 +844,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parallaxLayer: 1
   playerCamera: {fileID: 2136261206}
-  levelStartX: 33.5
-  levelStartY: 4
+  levelStartX: 34.17
+  levelStartY: 3.97
 --- !u!1 &2136261206
 GameObject:
   m_ObjectHideFlags: 0
