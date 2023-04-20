@@ -5,4 +5,6 @@ using UnityEngine;
 public class BackgroundManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] backgrounds;
+
+
 }
