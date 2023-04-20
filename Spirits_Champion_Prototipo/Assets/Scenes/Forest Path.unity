@@ -840,6 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bf4c2ffca66c9459bc65d3583222d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBase: 0
+  region: Village
 --- !u!4 &575035322
 Transform:
   m_ObjectHideFlags: 0
