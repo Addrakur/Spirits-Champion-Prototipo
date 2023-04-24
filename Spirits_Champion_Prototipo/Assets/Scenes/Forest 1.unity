@@ -20184,7 +20184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBase: 0
-  region: Forest
 --- !u!4 &575035322
 Transform:
   m_ObjectHideFlags: 0
@@ -20358,6 +20357,10 @@ PrefabInstance:
       value: Forest Path
       objectReference: {fileID: 0}
     - target: {fileID: 4227204648941677245, guid: 27121e51c217c469f81db78ca64fa207, type: 3}
+      propertyPath: nextRegion
+      value: Village
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227204648941677245, guid: 27121e51c217c469f81db78ca64fa207, type: 3}
       propertyPath: notAdditive
       value: 1
       objectReference: {fileID: 0}
@@ -20379,7 +20382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4227204648941677247, guid: 27121e51c217c469f81db78ca64fa207, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.86
+      value: -68.73
       objectReference: {fileID: 0}
     - target: {fileID: 4227204648941677247, guid: 27121e51c217c469f81db78ca64fa207, type: 3}
       propertyPath: m_LocalPosition.y

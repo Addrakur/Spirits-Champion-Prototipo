@@ -9,7 +9,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string nextScene; // Proxima cena a ser carregada
     [SerializeField] private string[] unloadScene; // Cenas antigas para dar unload
     [SerializeField] private bool notAdditive;
-    private float sceneLoadDelay = 2;
+    public string nextRegion;
+    private float sceneLoadDelay = 0.5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +18,8 @@ public class LevelManager : MonoBehaviour
         {
             if (notAdditive)
             {
+                GameObject backgroundManager = GameObject.Find("Background Manager");
+                backgroundManager.SendMessage("ChangeRegion", nextRegion);
                 StartCoroutine(SceneLoad());
             }
             else
