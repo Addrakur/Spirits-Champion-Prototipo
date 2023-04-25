@@ -11,7 +11,10 @@ public class BackgroundManager : MonoBehaviour
 
     private void Start()
     {
-
+        if(regiao == null)
+        {
+            regiao = "Village";
+        }
     }
 
     public void ChangeRegion(string newRegion)
