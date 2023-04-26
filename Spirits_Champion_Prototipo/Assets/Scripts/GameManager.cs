@@ -6,11 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private Player playerScript;
+    private GameObject player;
+    private string spawnPoint;
+    GameObject spawnPointObject;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.Find("Player Box");
+        if(player != null)
+        {
+            playerScript = player.GetComponent<Player>();
+            spawnPoint = playerScript.spawnPoint;
+            spawnPointObject = GameObject.Find(spawnPoint);
+            if(spawnPointObject != null)
+            {
+                player.transform.position = spawnPointObject.transform.position;
+            }
+        }
     }
 
     private void Update()

@@ -21,6 +21,11 @@ public class Player : MonoBehaviour
         playerRb.velocity = new Vector2(horizontalInput * speed, verticalInput * speed);
     }
 
+    void SpawnPoint(string nextSpawnPoint)
+    {
+        spawnPoint = nextSpawnPoint;
+    }
+
     /*private Rigidbody2D playerRb;
     [SerializeField] LayerMask groundLayer;
 

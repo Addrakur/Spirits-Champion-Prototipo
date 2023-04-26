@@ -21,6 +21,8 @@ public class LevelManager : MonoBehaviour
             {
                 GameObject backgroundManager = GameObject.Find("Background Manager");
                 backgroundManager.SendMessage("ChangeRegion", nextRegion);
+                GameObject player = GameObject.Find("Player Box");
+                player.SendMessage("SpawnPoint", "Spawn Point " + nextScene);
                 StartCoroutine(SceneLoad());
             }
             else
