@@ -9,24 +9,11 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private string nextScene; // Proxima cena a ser carregada
     [SerializeField] private string[] unloadScene; // Cenas antigas para dar unload
-    [SerializeField] private bool notAdditive;
-    public string nextRegion;
-    private float sceneLoadDelay = 0.5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name == "Player Box") // Verifica se o colisor está colidindo com o player e se a próxima cena não está carregada
         {
-            if (notAdditive)
-            {
-                GameObject backgroundManager = GameObject.Find("Background Manager");
-                backgroundManager.SendMessage("ChangeRegion", nextRegion);
-                GameObject player = GameObject.Find("Player Box");
-                player.SendMessage("SpawnPoint", "Spawn Point " + nextScene);
-                StartCoroutine(SceneLoad());
-            }
-            else
-            {
             if (!SceneManager.GetSceneByName(nextScene).isLoaded)
             {
                 SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Additive); // Carrega a próxima cena
@@ -39,14 +26,6 @@ public class LevelManager : MonoBehaviour
                     }
                 }
             }
-
-            }
         }
-    }
-
-    IEnumerator SceneLoad()
-    {
-        yield return new WaitForSeconds(sceneLoadDelay);
-        SceneManager.LoadScene(nextScene);
     }
 }

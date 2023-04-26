@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D playerRb;
     [SerializeField] float speed;
     public string spawnPoint;
+    public bool goToSpawnPoint;
 
     private void Start()
     {

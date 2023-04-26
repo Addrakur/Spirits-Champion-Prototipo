@@ -14,17 +14,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player Box");
-        if(player != null)
-        {
+            player = GameObject.Find("Player Box");
             playerScript = player.GetComponent<Player>();
             spawnPoint = playerScript.spawnPoint;
             spawnPointObject = GameObject.Find(spawnPoint);
-            if(spawnPointObject != null)
+
+        if (player != null && playerScript.goToSpawnPoint && spawnPointObject != null)
             {
-                player.transform.position = spawnPointObject.transform.position;
+                    player.transform.position = spawnPointObject.transform.position;
+                    playerScript.goToSpawnPoint = false;
             }
-        }
     }
 
     private void Update()

@@ -484,7 +484,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6140951012221828906}
   - component: {fileID: 6140951012221828905}
-  - component: {fileID: 6140951012221828907}
   m_Layer: 0
   m_Name: Background Manager
   m_TagString: Untagged
@@ -524,19 +523,7 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 6140951012030726426}
   - {fileID: 6140951011594179342}
-  regiao: 
---- !u!114 &6140951012221828907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6140951012221828904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eadd484aee4b4f4ab31588c7e90331d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  regiao: Village
 --- !u!1 &6140951012532185700
 GameObject:
   m_ObjectHideFlags: 0
