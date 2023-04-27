@@ -21,7 +21,7 @@ public class BackgroundManager : MonoBehaviour
     {
         regiao = newRegion;
 
-        switch (regiao)
+        switch (newRegion)
         {
             case "Village":
                 for (int i = 0; i < backgrounds.Length; i++) // Verifica se a regiao atual e a vila
@@ -33,6 +33,7 @@ public class BackgroundManager : MonoBehaviour
                     else
                     {
                         backgrounds[i].SetActive(false); // Desativa qualquer outro BG
+                        Debug.Log(backgrounds[i].name + " desligado");
                     }
                 }
                 break;
@@ -52,5 +53,4 @@ public class BackgroundManager : MonoBehaviour
                 break;
         }
     }
-
 }

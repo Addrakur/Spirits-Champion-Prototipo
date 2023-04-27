@@ -6,14 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public string regionNow;
+
+    private GameObject backgroundManager;
+    private BackgroundManager backgroundManagerScript;
+
     private Player playerScript;
     private GameObject player;
     private string spawnPoint;
     GameObject spawnPointObject;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
+            backgroundManager = GameObject.Find("Background Manager");
+            backgroundManagerScript = backgroundManager.GetComponent<BackgroundManager>();
             player = GameObject.Find("Player Box");
             playerScript = player.GetComponent<Player>();
             spawnPoint = playerScript.spawnPoint;
@@ -24,10 +30,7 @@ public class GameManager : MonoBehaviour
                     player.transform.position = spawnPointObject.transform.position;
                     playerScript.goToSpawnPoint = false;
             }
-    }
 
-    private void Update()
-    {
-
+        backgroundManagerScript.ChangeRegion(regionNow);
     }
 }

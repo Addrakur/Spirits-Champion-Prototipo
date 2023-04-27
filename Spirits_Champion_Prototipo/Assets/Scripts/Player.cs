@@ -4,30 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Rigidbody2D playerRb;
-    [SerializeField] float speed;
-    public string spawnPoint;
-    public bool goToSpawnPoint;
 
-    private void Start()
-    {
-        playerRb = GetComponent<Rigidbody2D>();
-    }
-
-    private void Update()
-    {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
-
-        playerRb.velocity = new Vector2(horizontalInput * speed, verticalInput * speed);
-    }
-
-    void SpawnPoint(string nextSpawnPoint)
-    {
-        spawnPoint = nextSpawnPoint;
-    }
-
-    /*private Rigidbody2D playerRb;
+    private Rigidbody2D playerRb;
     [SerializeField] LayerMask groundLayer;
 
     private float direction;
@@ -37,10 +15,12 @@ public class Player : MonoBehaviour
     public float startingJumpTime;
     public float currentJumpTime;
 
+    public bool goToSpawnPoint;
     public bool canJump;
     public bool isOnGround;
     public bool isAlive;
 
+    public string spawnPoint;
 
     BoxCollider2D boxCollider2D;
 
@@ -80,6 +60,10 @@ public class Player : MonoBehaviour
         {
             isOnGround = false;
         }
+    }
+    void SpawnPoint(string nextSpawnPoint)
+    {
+        spawnPoint = nextSpawnPoint;
     }
 
     #region Movement
@@ -121,5 +105,5 @@ public class Player : MonoBehaviour
         }
     }
 
-    #endregion*/
+    #endregion
 }
