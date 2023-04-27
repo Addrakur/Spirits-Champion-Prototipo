@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D playerRb;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask plataformLayer;
 
     private float direction;
     public float speed;
@@ -50,16 +51,22 @@ public class Player : MonoBehaviour
 
         float extraHeight = 0.1f;
         RaycastHit2D groundCheck = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, Vector2.down, extraHeight,groundLayer);
+        RaycastHit2D plataformCheck = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, Vector2.down, extraHeight, plataformLayer);
         if (groundCheck.collider != null)
         {
             isOnGround = true;
             canJump = true;
             currentJumpTime = startingJumpTime;
         }
+        else if(plataformCheck.collider != null)
+        {
+            isOnGround= true;
+        }
         else
         {
             isOnGround = false;
         }
+
     }
     void SpawnPoint(string nextSpawnPoint)
     {
