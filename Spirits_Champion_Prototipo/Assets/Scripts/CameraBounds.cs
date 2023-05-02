@@ -10,10 +10,12 @@ public class CameraBounds : MonoBehaviour
     [SerializeField] GameObject backgroundManager;
     [SerializeField] private GameObject cameraBoundVillage;
     [SerializeField] private GameObject cameraBoundForest;
+    [SerializeField] private GameObject cameraBoundTeste;
 
     private BackgroundManager backgroundManagerScript;
     private PolygonCollider2D cameraPolygonVillage;
     private PolygonCollider2D cameraPolygonForest;
+    private PolygonCollider2D cameraPolygonTeste;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class CameraBounds : MonoBehaviour
         confiner = GetComponent<Cinemachine.CinemachineConfiner2D>();
         cameraPolygonVillage = cameraBoundVillage.GetComponent<PolygonCollider2D>();
         cameraPolygonForest = cameraBoundForest.GetComponent<PolygonCollider2D>();
+        cameraPolygonTeste = cameraBoundTeste.GetComponent<PolygonCollider2D>();
     }
 
     private void Update()
@@ -34,6 +37,10 @@ public class CameraBounds : MonoBehaviour
 
             case "Forest":
                 confiner.m_BoundingShape2D = cameraPolygonForest;
+                break;
+
+            case "Teste":
+                confiner.m_BoundingShape2D = cameraPolygonTeste;
                 break;
         }
     }
