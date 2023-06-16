@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
         {
             playerRb.velocity = new Vector2(playerRb.velocity.x, jumpStrength);
         }
-
+        
         // Pulo Dinamico
         if (Input.GetKey(KeyCode.W) && currentJumpTime > 0 && canJump)
         {
